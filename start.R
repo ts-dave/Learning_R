@@ -1,0 +1,6 @@
+name <- readline("What is your name? ")
+time <- readline("Is it Morning, Afternoon or Evening? ")
+greeting <- paste("Hello,", name, sep = "")
+greeting_time <- paste("Good,", time)
+print(greeting)
+print(greeting_time)
