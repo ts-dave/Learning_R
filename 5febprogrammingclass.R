@@ -32,3 +32,13 @@ print(m2)
 m3 <- matrix(c(seq(20, 6)), 3, 5, byrow = TRUE)
 print(m3)
 
+
+
+
+
+
+
+
+
+
+
