@@ -18,24 +18,24 @@
 # A matrix is 2-dimensional data of the same type. like table with rows and columns
 # m <- matrix(c("a", "a", "b", "c", "b", "a"), nrow = 2, ncol = 3, byrow = TRUE)
 # print(m)
-# 
+
 # m_example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), nrow = 3, ncol = 4, byrow = TRUE)
 # print(m_example)
-# 
-# # you can replace the vector 1 to 12 with seq(1,12)
+
+# you can replace the vector 1 to 12 with seq(1,12)
 # m2 <- matrix(c(seq(5, 60, 5)), nrow = 3, ncol = 4, byrow = TRUE)
 # print(m2)
-# 
-# # 3 by 5 matrix starting from 20 to 6, with multiples 
-# # SHE USED BYROW FALSE AND IT STILL WORKED, ASK PROF
+
+# 3 by 5 matrix starting from 20 to 6, with multiples
+# SHE USED BYROW FALSE AND IT STILL WORKED, ASK PROF
 # m3 <- matrix(c(seq(20, 6)), 3, 5, byrow = TRUE)
 # print(m3)
 
 
 # Lists
 ############################
-# A list is an ordered collection of objects, like vectors, 
-# but lists can actually combine objects of different types. 
+# A list is an ordered collection of objects, like vectors,
+# but lists can actually combine objects of different types.
 
 # list1 <- list(c(2, 5, 3), 21.3, "sin")
 # print(list1)
@@ -80,20 +80,20 @@
 # print(nlevels(factor_apple))
 
 
-# Data frame
-############################
-# # Data Frames are data displayed in a format as a table.
-# # Data Frames can have different types of data inside it. 
-# # DATAFRAME - Just like vector but tabular and can contain different kinds of data types
-# 
+#Data frame
+###########################
+# Data Frames are data displayed in a format as a table.
+# Data Frames can have different types of data inside it.
+# DATAFRAME - Just like vector but tabular and can contain different kinds of data types
+
 # bmi <- data.frame(gender=c("male", "male", "female"),
 #                   height=c(152, 171.5, 165),
 #                   weight=c(81, 93, 78),
 #                   age=c(42, 28, 36)
 #                 )
-# 
-# 
-# 
+
+
+
 # bmi <- data.frame(gender=c("male", "male", "female", "male", "female", "male"),
 #                   marital_status=c("single", "maried", "divorced", "separated", "co-habiting", "single"),
 #                   height=c(152, 171.5, 165, 713, 174, 152),
@@ -101,7 +101,7 @@
 #                   age=c(42, 28, 36, 28, 25, 33)
 #                   )
 # print(bmi)
-# 
+# #
 # 
 # print(bmi[5,3])
 # print(bmi$height[5])
