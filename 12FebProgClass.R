@@ -1,4 +1,5 @@
 
+
 # 12 Feb 2025
 #0000000000000000
 
@@ -8,7 +9,7 @@
 ############################
 # apple <- c("red", "blue", "yellow", 200, 30)
 # myvec <- c(1, 2, 3 , 4, 5)
-# 
+#
 # try_vector <- c("aa", "bb", "cc", "dd", "ee")
 # print(length(try_vector))
 
@@ -39,7 +40,7 @@
 
 # list1 <- list(c(2, 5, 3), 21.3, "sin")
 # print(list1)
-# 
+#
 # thislist <- list("apple", "banana", "cherry")
 # thislist[1]
 # thislist[2]
@@ -49,7 +50,7 @@
 #0000000000000000
 
 # Arrays
-############################
+#############################
 
 # Array like vectors, vectors are 2 dimensional and array more than 2 dimensions
 # Note: Arrays can only have one data type.
@@ -57,8 +58,8 @@
 
 # a <- array(c('green', 'yellow'), dim = c(3, 3, 2))
 # print(a)
-# 
-# 
+#
+#
 # b <- array(c('green', 'yellow'), dim = c(3, 3, 3))
 # print(b)
 
@@ -67,13 +68,13 @@
 # Factor
 ############################
 # Factors are used to categorize data. Examples of factors are:
-  #Demography: Male/Female
-  #Music: Rock, Pop, Classic, Jazz
-  #Training: Strength, Stamina
-  #First create a vector
+#Demography: Male/Female
+#Music: Rock, Pop, Classic, Jazz
+#Training: Strength, Stamina
+#First create a vector
 
 # apple_colors <- c("green", "green", "yellow", "red", "red", "red", "green")
-# # 
+# #
 # # # now create a factor from the vector
 # factor_apple <- factor(apple_colors)
 # print(factor_apple)
@@ -101,8 +102,8 @@
 #                   age=c(42, 28, 36, 28, 25, 33)
 #                   )
 # print(bmi)
-# #
 # 
+#
 # print(bmi[5,3])
 # print(bmi$height[5])
 # print(bmi[5,])
@@ -127,16 +128,16 @@
 # } else {
 #   print("Value is a is not 6")
 # }
-# 
-# 
+#
+#
 # a <- 10
-# 
+#
 # if (a %% 2 == 0) {
 #   print("Number is even")
 # } else {
 #   print("Number is odd")
 # }
-# 
+#
 # str1 <- "hello"
 # str2 <- "Hello"
 # if (str1 == str2) {
@@ -144,15 +145,15 @@
 # } else {
 #   print("The two strings are unequal")
 # }
-# 
-# 
+#
+#
 # n <- 14
 # if ((n %% 2 == 0) || (n %% 3 == 0)) {
 #   print("Number is even or divisible")
 # }
-# 
+#
 # n <- 11
-# 
+#
 # if (!(n %% 2 == 0)) {
 #   print("Number is not even")
 # } else {
@@ -160,7 +161,7 @@
 # }
 
 # a <- 15
-# 
+#
 # if (a == 6) {
 #   print("a is 6")
 # } else if (a == 10) {
@@ -170,21 +171,157 @@
 # } else {
 #   print("a is neither of the above")
 # }
-# 
+#
 # print("End of program")
-
 
 
 # Switch Statement
 ############################
+# 
+# switch(expression,
+#        case1,
+#        case2
+#        case3
+#        ...,
+#        default)
 
-y <- 3
+# y <- 3
+# 
+# x <-  switch (y, 
+#              "Good Morning", 
+#              "Good Afternoon", 
+#              "Good Evening", 
+#              "Good Night")
+# 
+# print(x)
 
-x <- switch (
-  y,
-  "Good Morning",
-  "Good Afternoon",
-  "Good Evening",
-  "Good Night"
-)
-print(x)
+
+
+
+
+# 26TH FEB 2025
+#000000000000000000
+
+# LOOPS
+############################
+# LOOPS ARE USED TO RUN A BLOCK OF CODE REPEATED TIMES
+# TWO TYPES, FOR LOOP FOR WHEN YOU KNOW NUMBER OF TIMES TO RUN CODE
+# WHILE LOOP WHEN YOU DON'T KNOW THE NUMBER OF TIMES THE ITERATION WILL RUN
+
+
+# FOR LOOPS
+###########
+
+# a <- c(2, 45, 9, 12)
+# 
+# for (i in a) {
+#   print(i)
+# }
+
+
+# numbers <- c(2, 45, 9, 12)
+# total <- 0
+# 
+# for (number in numbers) {
+#   total <- total + i
+#   print(total)
+# }
+
+
+# names <- c("Afia", "Derry", "Saed", "Abigail", "Mary-Ann")
+# 
+# for (name in names) {
+#   print(name)
+# }
+
+
+# USE BREAK WORD TO BREAK OUT OF A LOOP
+# a <- c(2, 45, 9, 12)
+# 
+# for (i in a) {
+#   if (i == 9) {
+#     break
+#   }
+#   print(i)
+# }
+
+# USE NEXT WORK JUMP TO NEXT ITERATION
+# a <- c(2, 45, 9, 12)
+# 
+# for (i in a) {
+#   if (i == 9) {
+#     break
+#   }
+#   print(i)
+# }
+
+
+# V <- LETTERS[1:6]
+# 
+# for (i in V) {
+#   if (i == "D") {
+#     next
+#   }
+#   print(i)
+# }
+
+# USE NEXT WORK JUMP TO NEXT ITERATION
+# V <- LETTERS[1:4]
+# 
+# for (i in V) {
+#   print(i)
+# }
+
+# fruits <- c("apple", "orange", "pear", "pawpaw")
+# for (fruit in fruits) {
+#   print(fruit)
+# }
+
+
+# FOR LOOPS
+###########
+
+a <- 1
+
+while (a < 5) {
+  print(a)
+  a <- a + 1
+}
+
+
+a <- 1
+b <- 3
+while (a < 5) {
+  if (a == b) {
+    break
+  }
+  print(a)
+  a <- a + 1
+}
+
+
+v <- c("Hello", "while", "loop")
+cnt <- 2
+while (cnt < 7) {
+  
+  print(v)
+  cnt <-  cnt + 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
