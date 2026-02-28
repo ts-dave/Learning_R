@@ -278,8 +278,8 @@
 # }
 
 
-# FOR LOOPS
-###########
+# WHILE LOOPS
+##############
 
 a <- 1
 
@@ -298,7 +298,6 @@ while (a < 5) {
   print(a)
   a <- a + 1
 }
-
 
 v <- c("Hello", "while", "loop")
 cnt <- 2
