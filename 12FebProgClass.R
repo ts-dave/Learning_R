@@ -1,11 +1,14 @@
 
+# NB: USE PRINT TO PRINT OUTPUTS WITH INDEX NUMBERS AND USE CAT TO
+# PRINT WITHOUT THE INDEX NUMBERS
+
 
 # 12 Feb 2025
-#0000000000000000
+# 0000000000000000
 
 
 # A vector is the basic data type in R, contains list of items of the same type
-#Vectors
+# Vectors
 ############################
 # apple <- c("red", "blue", "yellow", 200, 30)
 # myvec <- c(1, 2, 3 , 4, 5)
@@ -14,7 +17,7 @@
 # print(length(try_vector))
 
 
-#Matrices
+# Matrices
 ############################
 # A matrix is 2-dimensional data of the same type. like table with rows and columns
 # m <- matrix(c("a", "a", "b", "c", "b", "a"), nrow = 2, ncol = 3, byrow = TRUE)
@@ -281,39 +284,120 @@
 # WHILE LOOPS
 ##############
 
-a <- 1
-
-while (a < 5) {
-  print(a)
-  a <- a + 1
-}
-
-
-a <- 1
-b <- 3
-while (a < 5) {
-  if (a == b) {
-    break
-  }
-  print(a)
-  a <- a + 1
-}
-
-v <- c("Hello", "while", "loop")
-cnt <- 2
-while (cnt < 7) {
-  
-  print(v)
-  cnt <-  cnt + 1
-}
+# a <- 1
+# 
+# while (a < 5) {
+#   print(a)
+#   a <- a + 1
+# }
 
 
+# a <- 1
+# b <- 3
+# while (a < 5) {
+#   if (a == b) {
+#     break
+#   }
+#   print(a)
+#   a <- a + 1
+# }
+
+# v <- c("Hello", "while", "loop")
+# cnt <- 2
+# while (cnt < 7) {
+#   
+#   print(v)
+#   cnt <-  cnt + 1
+# }
+
+
+# FUNCTIONS
+##############
+
+# fullname <- function(firstname, lastname, middlename) {
+#   paste(firstname, middlename, lastname)
+# }
+# fullname("Tsatsu", "Arnong", "Kwabla")
+
+
+
+# AddThem <- function(a, b) {
+#   return(a + b)
+# }
+# AddThem(5, 2)
 
 
 
 
+#####################################################
+### PROGRAMMING CHALLENGE QUESTION USING FUNCTIONS ###
+## QUESTION ##
+
+# Given an array arr[] containing only non-negative integers,
+# your task is to find a continuous subarray (a contiguous sequence of elements)
+# whose sum equals a specified value target. You need to return the
+# 1-based indices of the leftmost and rightmost elements of this subarray.
+# You need to find the first subarray whose sum is equal to the target.
+# 
+# Note: If no such array is possible then, return [-1].
+
+# Examples:
+# 
+# Input: arr[] = [1, 2, 3, 7, 5], target = 12
+# Output: [2, 4]
+# Explanation: The sum of elements from 2nd to 4th position is 12.
+# 
+# Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], target = 15
+# Output: [1, 5]
+# Explanation: The sum of elements from 1st to 5th position is 15.
+# 
+# Input: arr[] = [5, 3, 4], target = 2
+# Output: [-1]
+# Explanation: There is no subarray with sum 2.
+
+## SOLUTION ##
+
+# subarray_sum <- function(arr, target) {
+#   start <- 1
+#   current_sum <- 0
+#   
+#   for (end in 1:length(arr)) {
+#     current_sum <- current_sum + arr[end]
+#     
+#     while (current_sum > target && start <= end) {
+#       current_sum <- current_sum - arr[start]
+#       start <- start + 1
+#     }
+#     
+#     if (current_sum == target) {
+#       return(c(start, end))
+#     }
+#   }
+#   
+#   return(-1)
+# }
+# 
+# subarray_sum(arr=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), target=15)
 
 
+###############################################################
+
+# FUNCTION TO GET THE MAXIMUM ELEMENT IN AN ARRAY
+
+# max_func <- function(arr) {
+#   maximum <- arr[1]
+#   
+#   for (element in arr) {
+#     
+#     if (element > maximum) {
+#       maximum <- element
+#     }
+#   }
+#   
+#   return(maximum)
+# }
+# 
+# max_func(c(10, 2, 3, 4, 50, 6, 7, 8, 9, 10))
 
 
 
