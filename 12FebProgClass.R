@@ -384,27 +384,18 @@
 
 # FUNCTION TO GET THE MAXIMUM ELEMENT IN AN ARRAY
 
-# max_func <- function(arr) {
-#   maximum <- arr[1]
-#   
-#   for (element in arr) {
-#     
-#     if (element > maximum) {
-#       maximum <- element
-#     }
-#   }
-#   
-#   return(maximum)
-# }
-# 
-# max_func(c(10, 2, 3, 4, 50, 6, 7, 8, 9, 10))
+max_func <- function(arr) {
+  max <- arr[1]
 
+  for (num in arr) {
 
+    if (num > max) {
+      max <- num
+    }
+  }
+  return(max)
+}
 
-
-
-
-
-
+cat(max_func(c(10, 2, 3, 4, 50, 6, 74, 80, 9, 10)))
 
 

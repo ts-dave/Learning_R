@@ -34,10 +34,7 @@ employees <- data.frame(
   salary <- c( 50000, 45000, 60000, 55000, 48000),
   year_experience <- c(3, 5, 7, 4, 6)
 )
-print(employees)
-print(employees$name)
-print(employeer[1])
-print(employees[3,])
+View(employees)
 
 
 
