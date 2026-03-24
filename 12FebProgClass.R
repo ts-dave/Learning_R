@@ -357,45 +357,43 @@
 
 ## SOLUTION ##
 
-# subarray_sum <- function(arr, target) {
-#   start <- 1
-#   current_sum <- 0
-#   
-#   for (end in 1:length(arr)) {
-#     current_sum <- current_sum + arr[end]
-#     
-#     while (current_sum > target && start <= end) {
-#       current_sum <- current_sum - arr[start]
-#       start <- start + 1
-#     }
-#     
-#     if (current_sum == target) {
-#       return(c(start, end))
-#     }
-#   }
-#   
-#   return(-1)
-# }
-# 
-# subarray_sum(arr=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), target=15)
+subarray_sum <- function(arr, target) {
+  start <- 1
+  current_sum <- 0
+  
+  for (end in 1:length(arr)) {
+    current_sum <- current_sum + arr[end]
+    
+    while (current_sum > target && start <= end) {
+      current_sum <- current_sum - arr[start]
+      start <- start + 1
+    }
+    
+    if (current_sum == target) {
+      return(c(start, end))
+    }
+  }
+  
+  return(-1)
+}
+
+subarray_sum(arr=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), target=15)
 
 
 ###############################################################
 
 # FUNCTION TO GET THE MAXIMUM ELEMENT IN AN ARRAY
 
-max_func <- function(arr) {
-  max <- arr[1]
+# max_func <- function(arr) {
+#   max <- arr[1]
 
-  for (num in arr) {
+#   for (num in arr) {
 
-    if (num > max) {
-      max <- num
-    }
-  }
-  return(max)
-}
+#     if (num > max) {
+#       max <- num
+#     }
+#   }
+#   return(max)
+# }
 
-cat(max_func(c(10, 2, 3, 4, 50, 6, 74, 80, 9, 10)))
-
-
+# max_func(c(10, 92, 3, 4, 50, 6, 74, 80, 9, 10))
