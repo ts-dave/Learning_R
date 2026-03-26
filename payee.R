@@ -28,32 +28,37 @@ payee_tax <- function(income) {
 }
 
 
+print(payee_tax(5000))
+
+
 # TODO: Refactor the payee_tax function so that the values and tax rates 
 # can be dynamic, not hard coded in to the fucntion.
 
 
 # A game loop for calling the payee_tax function
-while (TRUE) {
-  income <- suppressWarnings(as.integer(readline(prompt = "Please input your income: ")))
-  
-  if (is.na(income)) {
-    print("ERROR: Income can only be a number")
-    next
-    
-  } else {
-    
-    if (income < 0) {
-      print("ERROR: Income cannot be a negative")
-      
-    } else if (income == 0) {
-      print("Program termiated")
-      break
-      
-    } else {
-      print(payee_tax(5000))
-    }
-  }
-}
+# while (TRUE) {
+#   income <- suppressWarnings(as.integer(readline(prompt = "Please input your income: ")))
+#   
+#   if (is.na(income)) {
+#     print("ERROR: Income can only be a number")
+#     next
+#     
+#   } else {
+#     
+#     if (income < 0) {
+#       print("ERROR: Income cannot be a negative")
+#       
+#     } else if (income == 0) {
+#       print("Program termiated")
+#       break
+#       
+#     } else {
+#       print(payee_tax(5000))
+#     }
+#   }
+# }
+
+
 
 
 
