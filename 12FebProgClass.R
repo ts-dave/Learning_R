@@ -406,40 +406,20 @@
 library(readxl)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 depression <- read_excel("perinatal_depression.xlsx")
 
-for (i in 1:nrow(depression)) {
+count <- 0
+for (line in 1:nrow(depression)) {
   count <- count + 1
 }
 
 print(count)
 
 
+line <- depression[200,5]
 
-
-
+line <- depression$trouble_falling_asleep[200]
+print(line)
 
 
 

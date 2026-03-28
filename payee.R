@@ -35,29 +35,15 @@ print(payee_tax(5000))
 # can be dynamic, not hard coded in to the fucntion.
 
 
-# A game loop for calling the payee_tax function
-# while (TRUE) {
-#   income <- suppressWarnings(as.integer(readline(prompt = "Please input your income: ")))
-#   
-#   if (is.na(income)) {
-#     print("ERROR: Income can only be a number")
-#     next
-#     
-#   } else {
-#     
-#     if (income < 0) {
-#       print("ERROR: Income cannot be a negative")
-#       
-#     } else if (income == 0) {
-#       print("Program termiated")
-#       break
-#       
-#     } else {
-#       print(payee_tax(5000))
-#     }
-#   }
-# }
-
+# A FAME LOOP FOR CALLING PAYEE FUNCTION
+while (TRUE) {
+  income <- suppressWarnings(as.numeric(readline(prompt = "Please enter you salary amount: ")))
+  
+  if (income == 0) {
+    break
+  }
+  print(payee_tax(income))
+}
 
 
 

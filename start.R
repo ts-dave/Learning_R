@@ -14,19 +14,6 @@ print(greeting_time)
 
 
 numbers <- c(seq(1,100))
-print(numbers)
-
-#how to get multiples of 3
-number %% 3 == 0
-
-# multiples of 5
-number %% 5 == 0
- 
-# multipls of both 3 and 5
-
-number %% 3 == 0 & number %% 5 == 0
-
-
 
 for (number in numbers) {
   
@@ -46,7 +33,6 @@ for (number in numbers) {
 }
 
 
-# READING DATA FROM FILE
 
 
 
