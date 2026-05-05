@@ -27,14 +27,19 @@
 # print(discounted_price)
 # print(total_cost)
 
-#Question 4 DATAFRAMES
-employees <- data.frame(
-  name <- c("John", "Sarah", "Mike", "Emma", "David"),
-  department <- c("IT", "HR", "IT", "Finance", "HR"),
-  salary <- c( 50000, 45000, 60000, 55000, 48000),
-  year_experience <- c(3, 5, 7, 4, 6)
-)
-View(employees)
+
+count <-  0
+
+while (count < 10) {
+  print("hello World")
+  print(count + 1)
+  count <- count + 1
+}
+
+
+
+
+
 
 
 

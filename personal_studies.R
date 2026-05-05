@@ -1,39 +1,35 @@
-# ## SAMPLE EXERCISE FROM EXERCISM WEBSITE
-# 
-# Your task is to convert a number into its corresponding raindrop sounds.
-# 
-# If a given number:
-#   
-# is divisible by 3, add "Pling" to the result.
-# is divisible by 5, add "Plang" to the result.
-# is divisible by 7, add "Plong" to the result.
-# is not divisible by 3, 5, or 7, the result should be the number as a string.
-# 
-# Examples
-# 28 is divisible by 7, but not 3 or 5, so the result would be "Plong".
-# 30 is divisible by 3 and 5, but not 7, so the result would be "PlingPlang".
-# 34 is not divisible by 3, 5, or 7, so the result would be "34".
+## PERSONAL R PROGRAMMING TUTORIALS DURING LONG BREAK ##
 
-
-raindrops <- function(number) {
-  sound <- ""
+hamming <- function(strand1, strand2) {
+  distance <- 0
   
-  if (number %% 3 == 0) {
-    sound <- paste(sound,"Pling", sep = "")
-  }
-  
-  if (number %% 5 == 0) {
-    sound <- paste(sound,"Plang", sep = "")
-  }
-  
-  if (number %% 7 == 0) {
-    sound <- paste(sound,"Plong", sep = "")
-  }
-  
-  if (nzchar(sound)) {
-    return(sound)
-
+  # Check strands have equal length
+  if (nchar(strand1) == nchar(strand2)) {
+    
+    # If strands are empty, return 0
+    if (nchar(strand1) == 0)
+      return(distance)
+    
+    # Break strands to list
+    chars1 <- strsplit(strand1, split="")[[1]]
+    chars2 <- strsplit(strand2, split="")[[1]]
+    
+    for (index in 1:length(chars1)) {
+      
+      if (chars1[index] != chars2[index]) {
+        distance <- distance + 1
+      }
+    }
+    return(distance)
   } else {
-    return(toString(number))
+    stop("Error: Both strands must be of equal length")
   }
+  
 }
+
+
+
+strand1 <- ""
+strand2 <- ""
+
+hamming(strand1, strand2)
