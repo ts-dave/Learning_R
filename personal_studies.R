@@ -28,8 +28,15 @@ hamming <- function(strand1, strand2) {
 }
 
 
-
 strand1 <- ""
 strand2 <- ""
 
 hamming(strand1, strand2)
+
+
+
+
+
+##################################################################
+
+
