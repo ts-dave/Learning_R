@@ -1,4 +1,6 @@
-### VECTORS
+
+###### VECTORS ######
+#--------------------#
 
 ## ADDING AND DELETING VECTOR ELEMENTS
 # YOU CANNOT DELETE OR ADD ELEMENTS TO VECTORS
@@ -134,4 +136,23 @@ z
 
 
 ### FILTERING ###
-# 
+z <- c(5, 2, -3, 8)
+w <- z[z*z > 8] #filters z for elements when squared greater the 8
+w
+
+# filtering and replaciing
+a <- c(5, 2, -3, 8)
+a[a > 3] <- 0 #replacing elements greater that 3 with 0
+a
+
+
+# using the subset() function
+b <- c(5, 2, -3, 8)
+subset(b,b > 5)
+#NB: subset() removes NA from your result
+
+
+# using the which() function
+z <- c(5, 2, -3, 8)
+which(z*z > 8) #which() returns the index for which condition is TRUE
+
