@@ -7,8 +7,7 @@
 # UNLESS YOU ASSIGN A NEW VARIABLE.
 x <- c(88, 5, 12, 13)
 x <- c(x[1:3], 168, x[4]) #SUBSETTING AND ADDING ELEMENTS
-# Obtaining length
-length(x)
+length(x) #OBTAINING LENGTH
 
 
 ## INDEXING VECTORS
@@ -49,7 +48,7 @@ preda <- function(x,k) {
   n <- lenght(x)
   k2 <- k/2
   
-  # the vector pred will contain our predicted values
+  # THE VECTOR pred WILL CONTAIN OUR PREDICTED VALUES
   pred <- vector(length-n-k)
   for (i in 1:(n-k)) {
     if (sum(x[i:(k-1)]) >= k2) {
@@ -66,7 +65,7 @@ preda <- function(x,k) {
 
 ### VECTORIZED OPERATIONS ###
 
-# Adding one to every member of the vector
+# ADDIN ONE TO EVERY ELEMENT IN THE VECTOR
 u <- c(5,2,8)
 
 w <- function(x) {
@@ -75,7 +74,7 @@ w <- function(x) {
 
 w(u)
 
-# Rounding every member of the vector
+# ROUNDING EVERY ELEMENT IN THE VECTOR
 y <- c(1.2, 3.9, 0.4)
 z <- round(y)
 z
@@ -90,7 +89,7 @@ z12 <- function(z) {
 x <- 1:8
 z12(x)
 
-#rewriting output as matrix
+#REWRITING OUTPUT AS METRIX
 matrix(z12(x), ncol = 2)
 
 
@@ -106,7 +105,7 @@ dup <- function(y) {
 y <- 1:10
 dup(y)
 
-matrix(dup(y), ncol = 2) #coercing output into matrix format
+matrix(dup(y), ncol = 2) #COERCING OUTPUT INTO VECTOR FORMAT
 
 sapply(y, dup)
 
@@ -155,4 +154,36 @@ subset(b,b > 5)
 # using the which() function
 z <- c(5, 2, -3, 8)
 which(z*z > 8) #which() returns the index for which condition is TRUE
+
+
+
+## VECTORIZED IF-THEN-ELSE: THE ifelse() FUNCTION USED IN VECTORS
+# ifelse(test, yes, no)
+ifelse(b,u,v) #for element i, tests for b[i], returns u[i] if true or v[i] if false
+x <- 1:10
+y <- ifelse(x %% 2 == 0, 5, 12) #replaces element with 5 if even, 12 if not even
+y #returns the modified vector
+
+
+# USING ifelse() FUNCTION TO MEASURE ASSOCIATION
+
+# findud() converts vector v to 1s, 0s, representing an element
+# increasing or not, relative to the previous one; output length is 1
+# less than input
+
+findud <- function(v) {
+  vud <- v[-1] - v[-length(v)]
+  return(ifelse(vud > 0,1,-1))
+}
+
+udcorr <- function(x,y) {
+  ud <- lapply(list(x,y), findud)
+  return(mean(ud[[1]] == ud[[2]]))
+}
+
+
+# REWRITING ABOVE FUNCTONS WITH BUILTIN R FUNCTIONS  - sign(), diff()
+udcorr1 <- function(x,y) {
+  return(mean(sign(diff(x)) == sign(diff(y))))
+}
 
