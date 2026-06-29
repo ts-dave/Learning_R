@@ -14,7 +14,7 @@ nrow(whitehall.data)
 ncol(whitehall.data)
 
 class(whitehall.data)
-class(whitehall.data$frailty)
+class(whitehall.data$bmi_grp4)
 class(whitehall.data$currsmoker)
 unique(whitehall.data$currsmoker)
 median(whitehall.data$sbp)
@@ -33,7 +33,19 @@ summary(whitehall.data$bmi_grp4)
 
 
 
+#* CALCULATING STANDARD ERROR OF SBP
+
+SBP.sd <- sd(whitehall.data$sbp, na.rm = TRUE)
+SBP.sd <- round(SBP.sd, digits = 3)
+
+SBP.n <- sum(!is.na(whitehall.data$sbp))
+
+SBP.se <- SBP.sd/sqrt(SBP.n)
+round(SBP.se, digits = 3)
+SBP.mean <- mean(whitehall.data$sbp, na.rm = TRUE)
+SBP.mean
 
 
 
-
+## TODO: CALCULATING CONFIDENCE INTERVAL
+# TODO: try hands on that
