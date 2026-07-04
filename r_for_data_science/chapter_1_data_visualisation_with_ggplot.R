@@ -158,7 +158,6 @@ ggplot(
   )
 
 
-
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_len, y = body_mass)
@@ -167,7 +166,6 @@ ggplot(
     mapping = aes(color = species, shape = species)
   ) +
   geom_smooth(se = FALSE)
-
 
 
 ## VISUALIZING CATEGORIACAL VARIABLES (BAR GRAPH) ## 
@@ -180,6 +178,12 @@ ggplot(penguins, aes(x = body_mass)) +
 
 ggplot(penguins, aes(x = body_mass)) +
   geom_density()
+
+
+## VISUALIZING RELATIONSHIPS ##
+### IN VISUALIZING RELATIONSHIPS, 2 VARIABLES HAVE TO BE MAPPED IN AESTHETICS
+#### A NUMERICAL AND A CATEGORICAL VARIABLE
+
 
 
 
