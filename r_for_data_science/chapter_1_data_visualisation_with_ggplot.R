@@ -1,5 +1,5 @@
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
+
 
 # CREATING A PLOTS USING GGPLOT2
 
@@ -87,3 +87,99 @@ ggplot(
 ##### BAR CHARTS/GRAPHS #####
 ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = cut))
+
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut, fill = cut))
+
+
+####### EVERYTHIN ABOVE WAS FOR THE FIST EDITION OF THE BOOK.
+##############################################################################
+##############################################################################
+##############################################################################
+
+###### NOW STARTING WITH THE SECOND EDITION
+library(tidyverse)
+
+penguins
+glimpse(penguins)
+str(penguins)
+
+#ggplot() takes the data to work with and that creates an empty canvas
+ggplot(data = penguins) 
+
+# mapping aesthetics to show what's on x and y axes.
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass)
+) 
+
+# adding a scatter plot layer
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass)
+) 
+
+# adding color difference to species
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass, color = species)
+) + 
+  geom_point()
+
+# adding line of best fit based on a linear model with method = "lm"
+ggplot(
+  data = penguins,
+  mapping = aes(x =flipper_len, y = body_mass, color = species)
+) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+# specifying color and shape for geom_point() only. so it doesn't affect the line.
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass)
+) +
+  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_smooth(method = "lm", se = FALSE)
+
+# adding labels and finishihg touches with the lab() layer.
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass)) +
+  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Body mass and flipper length",
+    subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins",
+    x = "Flipper length (mm)",
+    y = "Body mass (g)",
+    color = "Species",
+    shape = "Species"
+  )
+
+
+
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_len, y = body_mass)
+) + 
+  geom_point(
+    mapping = aes(color = species, shape = species)
+  ) +
+  geom_smooth(se = FALSE)
+
+
+
+## VISUALIZING CATEGORIACAL VARIABLES (BAR GRAPH) ## 
+ggplot(penguins, aes(x = species)) +
+  geom_bar()
+
+## VISUALIZING CONTINUOUS VARIABLES (HISTOGRAM) ## 
+ggplot(penguins, aes(x = body_mass)) +
+  geom_histogram(binwidth = 200
+
+ggplot(penguins, aes(x = body_mass)) +
+  geom_density()
+
+
+

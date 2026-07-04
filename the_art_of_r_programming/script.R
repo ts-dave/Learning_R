@@ -45,7 +45,7 @@ all(x > 0) # TRUE
 ## PREDICTING WEATHER
 
 preda <- function(x,k) {
-  n <- lenght(x)
+  n <- length(x)
   k2 <- k/2
   
   # THE VECTOR pred WILL CONTAIN OUR PREDICTED VALUES
