@@ -142,7 +142,7 @@ ggplot(
   geom_point(mapping = aes(color = species, shape = species)) +
   geom_smooth(method = "lm", se = FALSE)
 
-# adding labels and finishihg touches with the lab() layer.
+# Adding labels and finishihg touches with the lab() layer.
 ggplot(
   data = penguins,
   mapping = aes(x = flipper_len, y = body_mass)) +
@@ -155,7 +155,7 @@ ggplot(
     y = "Body mass (g)",
     color = "Species",
     shape = "Species"
-  )
+  ) 
 
 
 ggplot(
@@ -174,7 +174,7 @@ ggplot(penguins, aes(x = species)) +
 
 ## VISUALIZING CONTINUOUS VARIABLES (HISTOGRAM) ## 
 ggplot(penguins, aes(x = body_mass)) +
-  geom_histogram(binwidth = 200
+  geom_histogram(binwidth = 200)
 
 ggplot(penguins, aes(x = body_mass)) +
   geom_density()
@@ -183,7 +183,3 @@ ggplot(penguins, aes(x = body_mass)) +
 ## VISUALIZING RELATIONSHIPS ##
 ### IN VISUALIZING RELATIONSHIPS, 2 VARIABLES HAVE TO BE MAPPED IN AESTHETICS
 #### A NUMERICAL AND A CATEGORICAL VARIABLE
-
-
-
-
