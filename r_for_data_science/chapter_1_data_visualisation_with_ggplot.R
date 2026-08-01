@@ -1,7 +1,7 @@
 library(tidyverse)
 
 
-# CREATING A PLOTS USING GGPLOT2
+#### CREATING A PLOTS USING GGPLOT2 ####
 
 # TEMPLATE
 # ggplot(data = <DATA>) + 
@@ -182,4 +182,17 @@ ggplot(penguins, aes(x = body_mass)) +
 
 ## VISUALIZING RELATIONSHIPS ##
 ### IN VISUALIZING RELATIONSHIPS, 2 VARIABLES HAVE TO BE MAPPED IN AESTHETICS
-#### A NUMERICAL AND A CATEGORICAL VARIABLE
+#### A NUMERICAL AND A CATEGORICAL VARIABLE ####
+
+penguins |> 
+  ggplot(mapping = aes(x = body_mass, color = species)) +
+  geom_density(linewidth = 0.75)
+
+penguins |> 
+  ggplot(mapping = aes(x = body_mass, color = species, fill = species)) +
+  geom_density(alpha = 0.5)
+
+penguins |> 
+  ggplot(mapping = aes(x = flipper_len, y = body_mass)) +
+  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_smooth(se = FALSE)
